@@ -29,7 +29,8 @@ export class AppComponent {
   updateOrderList(order: Order){
     console.info(">>>>> Remove this order: " ,order);
     this.orderList.forEach( (item, index) => {
-      if(item === order) this.orderList.splice(index,1);
+      if(item === order) {this.orderList.splice(index,1)
+        this.total -=  order.price * parseInt(order.quantity)};
     });
     console.info("Updated orderList >>>>", this.orderList)
   }
