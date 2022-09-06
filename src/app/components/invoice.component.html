@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>item</th>
+    <th>price</th>
+    <th>quantity</th>
+  </tr>
+  <tr *ngFor="let order of orders;">
+    <td><button (click)="delete(order.id)"></button></td> 
+    <td>{{ order.item }}</td>
+    <td>{{ order.price }}</td>
+    <td>{{ order.quantity }}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Total Price</td>
+    <td>{{totalAmt}}</td>
+  </tr>
+</table>
+

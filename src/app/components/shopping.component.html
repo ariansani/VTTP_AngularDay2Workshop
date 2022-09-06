@@ -1,0 +1,39 @@
+<h1>Shopping Cart</h1>
+<div class="box-it">
+  <form [formGroup]="orderForm" (ngSubmit)="processForm()">
+    <table>
+      <tr>
+        <td>ID</td>
+        <td>
+          <input type="text" name="" id="" formControlName="id" />
+        </td>
+      </tr>
+      <tr>
+        <td>Item:</td>
+        <td><input type="text" size="30" formControlName="item" /></td>
+      </tr>
+      <tr>
+        <td>Unit Price:</td>
+        <td><input type="number" size="30" formControlName="price" /></td>
+      </tr>
+      <tr>
+        <td>Quantity:</td>
+        <td>
+          <select name="" id="" formControlName="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td></td>
+
+        <td>
+          <button type="submit">Add Order</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
